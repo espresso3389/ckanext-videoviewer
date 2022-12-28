@@ -22,7 +22,7 @@ class VideoviewerPlugin(plugins.SingletonPlugin):
         return {'name': 'videoviewer',
                 'title': plugins.toolkit._('Video'),
                 'icon': 'video-camera',
-                'schema': {'video_url': [ignore_empty, unicode]},
+                'schema': {'video_url': [ignore_empty, str]},
                 'iframed': False,
                 'always_available': False,
                 'default_title': plugins.toolkit._('Video'),
