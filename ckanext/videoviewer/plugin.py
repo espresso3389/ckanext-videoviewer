@@ -5,6 +5,8 @@ import logging
 log = logging.getLogger(__name__)
 ignore_empty = plugins.toolkit.get_validator('ignore_empty')
 
+DEFAULT_VIDEO_FORMATS = 'mp4 ogg webm'
+
 class VideoviewerPlugin(plugins.SingletonPlugin):
 
     '''This plugin makes views of video resources, using an <video> tag'''
@@ -16,7 +18,9 @@ class VideoviewerPlugin(plugins.SingletonPlugin):
 
     def update_config(self, config):
         plugins.toolkit.add_template_directory(config, 'theme/templates')
-        self.formats = ['video/mp4', 'video/ogg', 'video/webm']
+        self.formats = config.get(
+            'ckan.preview.video_formats',
+            DEFAULT_VIDEO_FORMATS).split()
 
     def info(self):
         return {'name': 'videoviewer',
