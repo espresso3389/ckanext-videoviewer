@@ -1,4 +1,5 @@
 include README.rst
 include LICENSE
 include requirements.txt
-recursive-include ckanext/videoviewer *.html *.json *.js *.less *.css *.mo
+recursive-include ckanext/videoviewer *.html *.json *.js *.less *.css *.mo *.yml
+recursive-include ckanext/videoviewer/migration *.ini *.py *.mako

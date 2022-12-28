@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup, find_packages  # Always prefer setuptools over distutils
+# Always prefer setuptools over distutils
+from setuptools import setup, find_packages
 from codecs import open  # To use a consistent encoding
 from os import path
 
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the relevant file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -17,15 +18,16 @@ setup(
     # http://packaging.python.org/en/latest/tutorial.html#version
     version='0.0.1',
 
-    description='''A video viewer extension for CKAN''',
+    description='''''',
     long_description=long_description,
+    long_description_content_type="text/markdown",
 
     # The project's main homepage.
-    url='https://github.com/guillermobet/ckanext-videoviewer',
+    url='https://github.com/espresso3389/ckanext-videoviewer',
 
     # Author details
-    author='''Guillermo Betancourt''',
-    author_email='''guillermojbetancourt@gmail.com''',
+    author='''Takashi Kawasaki''',
+    author_email='''espresso3389@gmail.com''',
 
     # Choose your license
     license='AGPL',
@@ -48,18 +50,19 @@ setup(
 
 
     # What does your project relate to?
-    keywords='''CKAN video viewer''',
+    keywords='''CKAN video preview''',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-    namespace_packages=['ckanext'],
+        namespace_packages=['ckanext'],
 
     install_requires=[
       # CKAN extensions should not list dependencies here, but in a separate
       # ``requirements.txt`` file.
       #
-      # http://docs.ckan.org/en/latest/extensions/best-practices.html#add-third-party-libraries-to-requirements-txt
+      # http://docs.ckan.org/en/latest/extensions/best-practices.html
+      # add-third-party-libraries-to-requirements-txt
     ],
 
     # If there are data files included in your packages that need to be
@@ -71,7 +74,8 @@ setup(
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages.
-    # see http://docs.python.org/3.4/distutils/setupscript.html#installing-additional-files
+    # see http://docs.python.org/3.4/distutils/setupscript.html
+    # installing-additional-files
     # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
     data_files=[],
 

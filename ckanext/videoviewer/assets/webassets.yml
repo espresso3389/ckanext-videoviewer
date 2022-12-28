@@ -1,0 +1,14 @@
+# videoviewer-js:
+#   filter: rjsmin
+#   output: ckanext-videoviewer/%(version)s-videoviewer.js
+#   contents:
+#     - js/videoviewer.js
+#   extra:
+#     preload:
+#       - base/main
+
+# videoviewer-css:
+#   filter: cssrewrite
+#   output: ckanext-videoviewer/%(version)s-videoviewer.css
+#   contents:
+#     - css/videoviewer.css
